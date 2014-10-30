@@ -1,5 +1,4 @@
 require "logstash/codecs/base"
-require "logstash/codecs/line"
 require "logstash/util"
 
 class LogStash::Codecs::EDN < LogStash::Codecs::Base
