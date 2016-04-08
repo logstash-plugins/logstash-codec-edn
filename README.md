@@ -1,7 +1,6 @@
 # Logstash Plugin
 
-[![Build
-Status](http://build-eu-00.elastic.co/view/LS%20Plugins/view/LS%20Codecs/job/logstash-plugin-codec-edn-unit/badge/icon)](http://build-eu-00.elastic.co/view/LS%20Plugins/view/LS%20Codecs/job/logstash-plugin-codec-edn-unit/)
+[![Travis Build Status](https://travis-ci.org/logstash-plugins/logstash-codec-edn.svg)](https://travis-ci.org/logstash-plugins/logstash-codec-edn)
 
 This is a plugin for [Logstash](https://github.com/elastic/logstash).
 
