@@ -1,3 +1,6 @@
+## 3.1.0
+  - Feat: target configuration + event-factory support [#6](https://github.com/logstash-plugins/logstash-codec-edn/pull/6)
+
 ## 3.0.6
   - Update gemspec summary
 
