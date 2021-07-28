@@ -38,6 +38,7 @@ Reads and produces EDN format data.
 
   * Value type is <<string,string>>
   * There is no default value for this setting.
+  * The option is only relevant while decoding.
 
 Define the target field for placing the decoded fields.
 If this setting is not set, data will be stored at the root (top level) of the event.
