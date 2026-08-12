@@ -1,3 +1,7 @@
+## 3.1.1
+  - Fix `NameError: uninitialized constant Bignum` that prevented the codec from loading on Logstash 9.4+ [#8](https://github.com/logstash-plugins/logstash-codec-edn/pull/8)
+    - The `edn` gem references the `Bignum` constant, which Ruby removed in 3.2 (shipped by the JRuby in Logstash 9.4+). This raised a `NameError` when the codec registered, so any pipeline using the `edn` codec failed to start. Alias the removed `Fixnum`/`Bignum` constants to `Integer` before requiring `edn`.
+
 ## 3.1.0
   - Feat: target configuration + event-factory support [#6](https://github.com/logstash-plugins/logstash-codec-edn/pull/6)
 
