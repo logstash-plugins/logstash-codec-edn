@@ -4,6 +4,13 @@ require "logstash/util"
 require 'logstash/plugin_mixins/event_support/event_factory_adapter'
 require 'logstash/plugin_mixins/validator_support/field_reference_validation_adapter'
 
+# Ruby 2.4 unified Fixnum/Bignum into Integer, and Ruby 3.2 (the JRuby shipped
+# with Logstash 9.4+) removed the old constants. The `edn` gem (v1.1.1, its last
+# release) still references Bignum in its core extensions, so alias the removed
+# constants back to Integer before `require "edn"` runs in #register.
+Fixnum = Integer unless defined?(Fixnum)
+Bignum = Integer unless defined?(Bignum)
+
 class LogStash::Codecs::EDN < LogStash::Codecs::Base
 
   extend LogStash::PluginMixins::ValidatorSupport::FieldReferenceValidationAdapter
